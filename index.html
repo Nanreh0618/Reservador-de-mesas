@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Mesas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🍽️ Sistema de Reservas del Restaurante</h1>
+  </header>
+
+  <section class="formulario">
+    <h2>Hacer una Reserva</h2>
+    <label>Nombre: <input type="text" id="nombre"></label>
+    <label>Fecha y hora: <input type="datetime-local" id="fecha"></label>
+    <label>Duración (minutos): 
+      <select id="duracion">
+        <option value="60">1 hora</option>
+        <option value="120">2 horas</option>
+        <option value="180">3 horas</option>
+      </select>
+    </label>
+  </section>
+
+  <main class="grid">
+    <!-- Generamos 12 mesas -->
+    <div id="mesa-1" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 1">
+      <button onclick="toggleReserva(1)">Reservar</button>
+    </div>
+    <div id="mesa-2" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 2">
+      <button onclick="toggleReserva(2)">Reservar</button>
+    </div>
+    <div id="mesa-3" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 3">
+      <button onclick="toggleReserva(3)">Reservar</button>
+    </div>
+    <div id="mesa-4" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 4">
+      <button onclick="toggleReserva(4)">Reservar</button>
+    </div>
+    <div id="mesa-5" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 5">
+      <button onclick="toggleReserva(5)">Reservar</button>
+    </div>
+    <div id="mesa-6" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 6">
+      <button onclick="toggleReserva(6)">Reservar</button>
+    </div>
+    <div id="mesa-7" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 7">
+      <button onclick="toggleReserva(7)">Reservar</button>
+    </div>
+    <div id="mesa-8" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 8">
+      <button onclick="toggleReserva(8)">Reservar</button>
+    </div>
+    <div id="mesa-9" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 9">
+      <button onclick="toggleReserva(9)">Reservar</button>
+    </div>
+    <div id="mesa-10" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 10">
+      <button onclick="toggleReserva(10)">Reservar</button>
+    </div>
+    <div id="mesa-11" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 11">
+      <button onclick="toggleReserva(11)">Reservar</button>
+    </div>
+    <div id="mesa-12" class="mesa">
+      <img src="img/mesa-disponible.png" alt="Mesa 12">
+      <button onclick="toggleReserva(12)">Reservar</button>
+    </div>
+  </main>
+
+  <section class="historial">
+    <h2>Historial de Reservas</h2>
+    <button id="borrarHistorial" onclick="borrarHistorial()">🗑️ Borrar todo el historial</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Mesa</th>
+          <th>Cliente</th>
+          <th>Inicio</th>
+          <th>Fin</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="historial-body"></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
